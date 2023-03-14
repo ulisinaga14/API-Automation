@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "82bbd7ed-7b1a-413f-811b-220abd9b7cee",
+		"name": "Technical Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22930765"
+	},
+	"item": [
+		{
+			"name": "get value",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{my_env}}/v2.0/current?lat=40.730610 &lon=-73.935242&key=29bd4c01ca164f629b980e3967f85824",
+					"host": [
+						"{{my_env}}"
+					],
+					"path": [
+						"v2.0",
+						"current"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "40.730610 "
+						},
+						{
+							"key": "lon",
+							"value": "-73.935242"
+						},
+						{
+							"key": "key",
+							"value": "29bd4c01ca164f629b980e3967f85824"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forecast",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{my_env}}/v2.0/forecast/hourly?key=29bd4c01ca164f629b980e3967f85824&postal_code=27601&hours=3",
+					"host": [
+						"{{my_env}}"
+					],
+					"path": [
+						"v2.0",
+						"forecast",
+						"hourly"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "29bd4c01ca164f629b980e3967f85824"
+						},
+						{
+							"key": "postal_code",
+							"value": "27601"
+						},
+						{
+							"key": "hours",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
